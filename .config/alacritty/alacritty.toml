@@ -1,0 +1,19 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/alacritty-theme/themes/tokyo_night.toml"
+]
+
+[window]
+opacity = 0.9
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+bold.family = "JetBrains Mono Nerd Font"
+italic.family = "JetBrains Mono Nerd Font"
+bold_italic.family = "JetBrains Mono Nerd Font"
+size = 13.0
+
