@@ -11,33 +11,32 @@
 @define-color white #ffffff; 
 
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: "IosevkaTerm Nerd Font";
+    font-size: 18px;
 }
 
 window#waybar {
-    background-color: @bg;
-    color: @fg;
+    background-color: #171717;
+    color: #CCCCCC;
 }
 
 #workspaces button {
     padding: 0 6px;
-    color: @blu;
+    color: #999999;
     background: transparent;
-    border-bottom: 3px solid @bg;
+    /*border-bottom: 3px solid #171717;*/
 }
 
 #workspaces button.active {
-    color: @blu;
-    border-bottom: 3px solid @mag;
+    color: @white;
+    /*border-bottom: 3px solid @white;*/
 }
 #workspaces button.empty {
-    color: @white;
+    color: #999999;
 }
 #workspaces button.empty.active {
-    color: @cyn;
-    border-bottom: 3px solid @mag;
+    color: @white;
+    /*border-bottom: 3px solid @mag;*/
 }
 
 #workspaces button.urgent {
@@ -45,7 +44,7 @@ window#waybar {
 }
 
 button:hover {
-    background: inherit;
+    /*background: inherit;*/
     /*box-shadow: inset 0 -3px #ffffff;*/
 }
 
@@ -58,7 +57,7 @@ button:hover {
 #network,
 #pulseaudio,
 #tray {
-    padding: 0 8px;
+    padding: 0 5px;
     color: @white;
 }
 
@@ -67,8 +66,8 @@ button:hover {
 }
 
 #clock {
-    color: @cyn;
-    border-bottom: 4px solid @cyn;
+    color: #CCCCCC;
+    /*border-bottom: 4px solid @cyn;*/
 }
 
 #battery {
@@ -101,8 +100,8 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @ylw;
-    border-bottom: 4px solid @ylw;
+    color: #CCCCCC;
+    /*border-bottom: 4px solid @ylw;*/
 }
 
 #tray {

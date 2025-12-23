@@ -2,7 +2,7 @@
 {
     "layer": "top", 
     "position": "top", 
-    "height": 30, 
+    "height": 20, 
     "spacing": 4, 
 
     // Choose the order of the modules
@@ -17,19 +17,20 @@
 
     "modules-right": [
         "custom/sep",
-        "network",
+        "tray",
+        
+        //"custom/sep",
+        //"network",
         "custom/sep",
         "pulseaudio",
-        "custom/sep",
-        "cpu",
-        "custom/sep",
-        "memory",
-        "custom/sep",
-        //"disk",
         //"custom/sep",
-        "clock",
+        //"cpu",
+        //"custom/sep",
+        //"memory",
+        //"custom/sep",
+        //"disk",
         "custom/sep",
-        "tray",
+        "clock",
         "custom/sep"
     ],
 
@@ -38,10 +39,10 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}",
-        "persistent-workspaces": {
-            "*" : 9
-        }
+        "format": "{name}"
+        //"persistent-workspaces": {
+        //    "*" : 9
+        //}
     },
     "hyprland/window" : {
         "max-length": 40,
