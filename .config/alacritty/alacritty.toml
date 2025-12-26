@@ -11,7 +11,7 @@ decorations = "Full"
 decorations_theme_variant = "Dark"
 
 [font]
-normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
+normal = { family = "CommitMono Nerd Font", style = "Regular" }
 #bold.family = "JetBrains Mono Nerd Font"
 #italic.family = "JetBrains Mono Nerd Font"
 #bold_italic.family = "JetBrains Mono Nerd Font"
