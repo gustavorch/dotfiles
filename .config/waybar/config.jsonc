@@ -7,31 +7,27 @@
 
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
-        //"custom/sep",
-        //"hyprland/window",
-        //"custom/sep"
+        "hyprland/workspaces",
+        "custom/sep",
+        "hyprland/window",
+        "custom/sep"
     ],
     "modules-center": [
     ],
 
     "modules-right": [
         "custom/sep",
-        "tray",
-        
-        //"custom/sep",
-        //"network",
+        "network",
         "custom/sep",
-        "pulseaudio",
-        //"custom/sep",
-        //"cpu",
-        //"custom/sep",
-        //"memory",
-        //"custom/sep",
-        //"disk",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "disk",
         "custom/sep",
         "clock",
-        "custom/sep"
+        "custom/sep",
+        "tray"
     ],
 
     // Modules configuration
@@ -42,7 +38,7 @@
         "format": "{name}",
         "persistent-workspaces": {
             "*" : 9
-        },
+        }
     },
     "hyprland/window" : {
         "max-length": 40,
@@ -57,6 +53,7 @@
         // }
     },
     "clock": {
+        "format": "{:%H:%M • %d/%m/%Y}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -90,22 +87,5 @@
     "custom/sep": {
         "format" : "|",
         "interval" : 0
-    },
-    
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "tooltip": false,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "headset": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
+    }
 }

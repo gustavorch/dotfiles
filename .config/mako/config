@@ -1,11 +1,10 @@
-font=IosevkaTerm Nerd Font 12
+font=JetBrainsMono Nerd Font 14
 background-color=#1A1B26
 text-color=#A9B1D6
 width=300
 #height=250
-border-size=2
-border-color=#7299EA
-border-radius=8
-icon-border-radius=5
+border-size=1
+border-color=#7AA2F7
+border-radius=0
 default-timeout=5000
 layer=overlay

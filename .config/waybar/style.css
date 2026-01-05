@@ -11,32 +11,32 @@
 @define-color white #ffffff; 
 
 * {
-    font-family: "IosevkaTerm Nerd Font";
+    font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 16px;
+    font-weight: bold;
 }
 
 window#waybar {
-    background-color: #171717;
-    color: #CCCCCC;
+    background-color: @bg;
+    color: @fg;
 }
 
 #workspaces button {
     padding: 0 6px;
-    color: #999999;
+    color: @cyn;
     background: transparent;
-    /*border-bottom: 3px solid #171717;*/
+    border-bottom: 3px solid @bg;
 }
-
 #workspaces button.active {
-    color: @white;
-    /*border-bottom: 3px solid @white;*/
+    color: @cyn;
+    border-bottom: 3px solid @mag;
 }
 #workspaces button.empty {
-    color: #999999;
+    color: @white;
 }
 #workspaces button.empty.active {
-    color: @white;
-    /*border-bottom: 3px solid @mag;*/
+    color: @cyn;
+    border-bottom: 3px solid @mag;
 }
 
 #workspaces button.urgent {
@@ -44,8 +44,8 @@ window#waybar {
 }
 
 button:hover {
-    /*background: inherit;*/
-    /*box-shadow: inset 0 -3px #ffffff;*/
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
 }
 
 #clock,
@@ -55,9 +55,8 @@ button:hover {
 #memory,
 #disk,
 #network,
-#pulseaudio,
 #tray {
-    padding: 0 5px;
+    padding: 0 8px;
     color: @white;
 }
 
@@ -66,8 +65,8 @@ button:hover {
 }
 
 #clock {
-    color: #CCCCCC;
-    /*border-bottom: 4px solid @cyn;*/
+    color: @cyn;
+    border-bottom: 4px solid @cyn;
 }
 
 #battery {
@@ -99,12 +98,6 @@ button:hover {
     background-color: @red;
 }
 
-#pulseaudio {
-    color: #CCCCCC;
-    /*border-bottom: 4px solid @ylw;*/
-}
-
 #tray {
     background-color: transparent;
 }
-
