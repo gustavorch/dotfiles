@@ -1,0 +1,8 @@
+
+@theme "~/.config/rofi/themes/dtos-center.rasi"
+
+configuration {
+	font: "JetBrainsMono Nerd Font 12";
+	modi: "window,drun,ssh,combi";
+	combi-modi: "window,drun,ssh";	
+}
