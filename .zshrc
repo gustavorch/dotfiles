@@ -1,31 +1,37 @@
-source ~/.config/shell/aliasrc
-source ~/.config/shell/profile
-
-bindkey -e
-
-# History
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/history"
-HISTSIZE=1000
-SAVEHIST=1000
-
-# Tweaks
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt extendedglob nomatch
 setopt autocd
 setopt interactive_comments
-stty stop undef
+bindkey -v
+zstyle :compinstall filename '/home/gustavo/.zshrc'
 
-# Colors
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
 autoload -U colors && colors
 PS1="[%{$fg[cyan]%}%n%{$fg[white]%}@%{$fg[white]%}%M %{$fg[cyan]%}%1~%{$fg[white]%}]%{$reset_color%}$ "
 
-# Autocomplete
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
+alias grep='grep --color=auto'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....'cd ../../..'
+alias ls='ls --color=auto'
+alias ll='ls -alF --color=auto'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
+alias hx='helix'
+alias y='yazi'
+alias listpackages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias man='batman'
+alias cat='bat'
+alias fx='felix'
+alias v='nvim'
+alias vim='nvim'
 
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Launch Xorg
-# [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+. "$HOME/.local/bin/env"
